@@ -212,7 +212,7 @@ async function main() {
 
     //list of all songs
     await getsongs("song/ncs")
-    playmusic(songs[0], true)
+    playmusic(songs[0])
     // console.log(songs)
     // currentsong.src="/spotify/song/" +songs[0]
 
