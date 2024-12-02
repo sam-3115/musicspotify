@@ -29,7 +29,7 @@ async function getsongs(folder) {
     for (let index = 0; index < as.length; index++) {
         const element = as[index];
         if (element.href.endsWith(".mp3")) {
-            songs.push(element.href.split(`${folder}`)[1])
+            songs.push(element.href.split(`/${folder}/`)[1])
         }
     }
     let songul = document.querySelector(".songlist").getElementsByTagName("ul")[0]
@@ -212,6 +212,7 @@ async function main() {
 
     //list of all songs
     await getsongs("song/ncs")
+    playMusic(songs[0], true)
     // console.log(songs)
     // currentsong.src="/spotify/song/" +songs[0]
 
