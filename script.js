@@ -208,7 +208,7 @@ Array.from(document.getElementsByClassName("card")).forEach(e => {
 async function main() {
 
     //list of all songs
-    await getsongs("/song/ncs")
+    await getsongs("song/ncs")
     // console.log(songs)
     // currentsong.src="/spotify/song/" +songs[0]
 
