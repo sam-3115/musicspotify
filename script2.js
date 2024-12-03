@@ -140,15 +140,15 @@ async function displayalbum() {
         let array = Array.from(anchor)
         for (let index = 0; index < array.length; index++) {
             const e = array[index];
-            // console.log(e.href)
+            console.log(e.href)
 
             if (e.href.includes("/song/") && !e.href.includes(".htaccess")) {
-                let folder = e.href.split("/").slice(-1)[0]
+                let folder = e.href.split("/").slice(-2)[0]
                 // Get the metadata of the folder
-                // console.log(folder,e.href)
+                console.log(folder,e.href)
                 let a = await fetch(`/song/${folder}/info.json`)
                 let response = await a.json(); 
-                // console.log(response)
+                console.log(response)
                 cardcontainer.innerHTML = cardcontainer.innerHTML + ` <div data-folder="${folder}" class="card">
                 <div class="play">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
